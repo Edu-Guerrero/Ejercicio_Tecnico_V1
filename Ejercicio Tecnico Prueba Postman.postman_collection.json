@@ -1,0 +1,2685 @@
+{
+	"info": {
+		"_postman_id": "34907c14-8ab0-4d2a-96c8-615e59c9a823",
+		"name": "Ejercicio Tecnico Prueba Postman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44817915",
+		"_collection_link": "https://eduardoguerrero-98588.postman.co/workspace/Eduardo-Guerrero's-Workspace~a0193921-8dee-4b32-8d10-27bd1771a473/collection/44817915-34907c14-8ab0-4d2a-96c8-615e59c9a823?action=share&source=collection_link&creator=44817915"
+	},
+	"item": [
+		{
+			"name": "GETs de informacion inicial",
+			"item": [
+				{
+					"name": "Ver clientes originales",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"customers"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Clientes Originales",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/customers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"customers"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 May 2025 17:14:27 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"nombre\": \"Jose Lema\",\n        \"genero\": \"Masculino\",\n        \"identificacion\": \"12345678901\",\n        \"direccion\": \"Otavalo sn y principal\",\n        \"telefono\": \"098254785\",\n        \"contrasena\": \"1234\",\n        \"estado\": true\n    },\n    {\n        \"id\": 2,\n        \"nombre\": \"Marianela Montalvo\",\n        \"genero\": \"Femenino\",\n        \"identificacion\": \"23456789012\",\n        \"direccion\": \"Amazonas y NNUU\",\n        \"telefono\": \"097548965\",\n        \"contrasena\": \"5678\",\n        \"estado\": true\n    },\n    {\n        \"id\": 3,\n        \"nombre\": \"Juan Osorio\",\n        \"genero\": \"Masculino\",\n        \"identificacion\": \"34567890123\",\n        \"direccion\": \"13 junio y Equinoccial\",\n        \"telefono\": \"098874587\",\n        \"contrasena\": \"1245\",\n        \"estado\": true\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Buscar cliente por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/customers/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Cliente id = 3",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/customers/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"customers",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 May 2025 17:15:20 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"nombre\": \"Juan Osorio\",\n    \"genero\": \"Masculino\",\n    \"identificacion\": \"34567890123\",\n    \"direccion\": \"13 junio y Equinoccial\",\n    \"telefono\": \"098874587\",\n    \"contrasena\": \"1245\",\n    \"estado\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Cliente no existente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/customers/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Mensaje de error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/customers/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"customers",
+										"4"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 May 2025 17:15:58 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Not Found\",\n    \"message\": \"Cliente not found with id: 4\",\n    \"timestamp\": \"2025-05-31T12:15:58.3028459\",\n    \"status\": 404\n}"
+						}
+					]
+				},
+				{
+					"name": "Ver Cuentas Existentes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/accounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"accounts"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Cuentas Originales",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/accounts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"accounts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 May 2025 17:17:00 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"numeroCuenta\": \"478758\",\n        \"saldo\": 2000,\n        \"tipoCuenta\": \"Ahorro\",\n        \"estado\": true,\n        \"cliente\": {\n            \"id\": 1,\n            \"nombre\": \"Jose Lema\",\n            \"genero\": \"Masculino\",\n            \"identificacion\": \"12345678901\",\n            \"direccion\": \"Otavalo sn y principal\",\n            \"telefono\": \"098254785\",\n            \"contrasena\": \"1234\",\n            \"estado\": true\n        },\n        \"movimientos\": []\n    },\n    {\n        \"id\": 2,\n        \"numeroCuenta\": \"225487\",\n        \"saldo\": 100,\n        \"tipoCuenta\": \"Corriente\",\n        \"estado\": true,\n        \"cliente\": {\n            \"id\": 2,\n            \"nombre\": \"Marianela Montalvo\",\n            \"genero\": \"Femenino\",\n            \"identificacion\": \"23456789012\",\n            \"direccion\": \"Amazonas y NNUU\",\n            \"telefono\": \"097548965\",\n            \"contrasena\": \"5678\",\n            \"estado\": true\n        },\n        \"movimientos\": []\n    },\n    {\n        \"id\": 3,\n        \"numeroCuenta\": \"495878\",\n        \"saldo\": 0,\n        \"tipoCuenta\": \"Ahorros\",\n        \"estado\": true,\n        \"cliente\": {\n            \"id\": 3,\n            \"nombre\": \"Juan Osorio\",\n            \"genero\": \"Masculino\",\n            \"identificacion\": \"34567890123\",\n            \"direccion\": \"13 junio y Equinoccial\",\n            \"telefono\": \"098874587\",\n            \"contrasena\": \"1245\",\n            \"estado\": true\n        },\n        \"movimientos\": []\n    },\n    {\n        \"id\": 4,\n        \"numeroCuenta\": \"496825\",\n        \"saldo\": 540,\n        \"tipoCuenta\": \"Ahorros\",\n        \"estado\": true,\n        \"cliente\": {\n            \"id\": 2,\n            \"nombre\": \"Marianela Montalvo\",\n            \"genero\": \"Femenino\",\n            \"identificacion\": \"23456789012\",\n            \"direccion\": \"Amazonas y NNUU\",\n            \"telefono\": \"097548965\",\n            \"contrasena\": \"5678\",\n            \"estado\": true\n        },\n        \"movimientos\": []\n    },\n    {\n        \"id\": 5,\n        \"numeroCuenta\": \"585545\",\n        \"saldo\": 1000,\n        \"tipoCuenta\": \"Corriente\",\n        \"estado\": true,\n        \"cliente\": {\n            \"id\": 1,\n            \"nombre\": \"Jose Lema\",\n            \"genero\": \"Masculino\",\n            \"identificacion\": \"12345678901\",\n            \"direccion\": \"Otavalo sn y principal\",\n            \"telefono\": \"098254785\",\n            \"contrasena\": \"1234\",\n            \"estado\": true\n        },\n        \"movimientos\": []\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Buscar Cuenta por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/accounts/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"accounts",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Cuenta id = 2",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/accounts/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"accounts",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 May 2025 17:17:54 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"numeroCuenta\": \"225487\",\n    \"saldo\": 100,\n    \"tipoCuenta\": \"Corriente\",\n    \"estado\": true,\n    \"cliente\": {\n        \"id\": 2,\n        \"nombre\": \"Marianela Montalvo\",\n        \"genero\": \"Femenino\",\n        \"identificacion\": \"23456789012\",\n        \"direccion\": \"Amazonas y NNUU\",\n        \"telefono\": \"097548965\",\n        \"contrasena\": \"5678\",\n        \"estado\": true\n    },\n    \"movimientos\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Buscar por numero de cuenta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/accounts/number/496825",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"accounts",
+								"number",
+								"496825"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Cuenta numero = 496825",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/accounts/number/496825",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"accounts",
+										"number",
+										"496825"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 May 2025 17:19:14 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 4,\n    \"numeroCuenta\": \"496825\",\n    \"saldo\": 540,\n    \"tipoCuenta\": \"Ahorros\",\n    \"estado\": true,\n    \"cliente\": {\n        \"id\": 2,\n        \"nombre\": \"Marianela Montalvo\",\n        \"genero\": \"Femenino\",\n        \"identificacion\": \"23456789012\",\n        \"direccion\": \"Amazonas y NNUU\",\n        \"telefono\": \"097548965\",\n        \"contrasena\": \"5678\",\n        \"estado\": true\n    },\n    \"movimientos\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Buscar Cuenta por id cliente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/accounts/customer/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"accounts",
+								"customer",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Cuentas del cliente id = 2",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/accounts/customer/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"accounts",
+										"customer",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 May 2025 17:20:29 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 2,\n        \"numeroCuenta\": \"225487\",\n        \"saldo\": 100,\n        \"tipoCuenta\": \"Corriente\",\n        \"estado\": true,\n        \"cliente\": {\n            \"id\": 2,\n            \"nombre\": \"Marianela Montalvo\",\n            \"genero\": \"Femenino\",\n            \"identificacion\": \"23456789012\",\n            \"direccion\": \"Amazonas y NNUU\",\n            \"telefono\": \"097548965\",\n            \"contrasena\": \"5678\",\n            \"estado\": true\n        },\n        \"movimientos\": []\n    },\n    {\n        \"id\": 4,\n        \"numeroCuenta\": \"496825\",\n        \"saldo\": 540,\n        \"tipoCuenta\": \"Ahorros\",\n        \"estado\": true,\n        \"cliente\": {\n            \"id\": 2,\n            \"nombre\": \"Marianela Montalvo\",\n            \"genero\": \"Femenino\",\n            \"identificacion\": \"23456789012\",\n            \"direccion\": \"Amazonas y NNUU\",\n            \"telefono\": \"097548965\",\n            \"contrasena\": \"5678\",\n            \"estado\": true\n        },\n        \"movimientos\": []\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "Agregar Cliente id 4",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Juan Pérez\",\r\n  \"genero\": \"Masculino\",\r\n  \"identificacion\": \"12345678901\",\r\n  \"direccion\": \"Calle Falsa 123\",\r\n  \"telefono\": \"3101234567\",\r\n  \"contrasena\": \"clave123\",\r\n  \"estado\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"customers"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Cliente agregado",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nombre\": \"Juan Pérez\",\r\n  \"genero\": \"Masculino\",\r\n  \"identificacion\": \"12345678901\",\r\n  \"direccion\": \"Calle Falsa 123\",\r\n  \"telefono\": \"3101234567\",\r\n  \"contrasena\": \"clave123\",\r\n  \"estado\": true\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/customers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"customers"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 May 2025 17:26:44 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 4,\n    \"nombre\": \"Juan Pérez\",\n    \"genero\": \"Masculino\",\n    \"identificacion\": \"12345678901\",\n    \"direccion\": \"Calle Falsa 123\",\n    \"telefono\": \"3101234567\",\n    \"contrasena\": \"clave123\",\n    \"estado\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Agregar Cliente id 5",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Ana Martínez\",\r\n  \"genero\": \"Femenino\",\r\n  \"identificacion\": \"10987654321\",\r\n  \"direccion\": \"Av. Siempre Viva 742\",\r\n  \"telefono\": \"3009876543\",\r\n  \"contrasena\": \"secure456\",\r\n  \"estado\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"customers"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Cliente Agregado",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nombre\": \"Ana Martínez\",\r\n  \"genero\": \"Femenino\",\r\n  \"identificacion\": \"10987654321\",\r\n  \"direccion\": \"Av. Siempre Viva 742\",\r\n  \"telefono\": \"3009876543\",\r\n  \"contrasena\": \"secure456\",\r\n  \"estado\": true\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/customers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"customers"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 May 2025 17:28:05 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 5,\n    \"nombre\": \"Ana Martínez\",\n    \"genero\": \"Femenino\",\n    \"identificacion\": \"10987654321\",\n    \"direccion\": \"Av. Siempre Viva 742\",\n    \"telefono\": \"3009876543\",\n    \"contrasena\": \"secure456\",\n    \"estado\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Ver Clientes nuevos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Ana Martínez\",\r\n  \"genero\": \"Femenino\",\r\n  \"identificacion\": \"10987654321\",\r\n  \"direccion\": \"Av. Siempre Viva 742\",\r\n  \"telefono\": \"3009876543\",\r\n  \"contrasena\": \"secure456\",\r\n  \"estado\": true\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"customers"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Clientes Nuevos",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nombre\": \"Ana Martínez\",\r\n  \"genero\": \"Femenino\",\r\n  \"identificacion\": \"10987654321\",\r\n  \"direccion\": \"Av. Siempre Viva 742\",\r\n  \"telefono\": \"3009876543\",\r\n  \"contrasena\": \"secure456\",\r\n  \"estado\": true\r\n}\r\n"
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/customers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"customers"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 May 2025 17:28:38 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"nombre\": \"Jose Lema\",\n        \"genero\": \"Masculino\",\n        \"identificacion\": \"12345678901\",\n        \"direccion\": \"Otavalo sn y principal\",\n        \"telefono\": \"098254785\",\n        \"contrasena\": \"1234\",\n        \"estado\": true\n    },\n    {\n        \"id\": 2,\n        \"nombre\": \"Marianela Montalvo\",\n        \"genero\": \"Femenino\",\n        \"identificacion\": \"23456789012\",\n        \"direccion\": \"Amazonas y NNUU\",\n        \"telefono\": \"097548965\",\n        \"contrasena\": \"5678\",\n        \"estado\": true\n    },\n    {\n        \"id\": 3,\n        \"nombre\": \"Juan Osorio\",\n        \"genero\": \"Masculino\",\n        \"identificacion\": \"34567890123\",\n        \"direccion\": \"13 junio y Equinoccial\",\n        \"telefono\": \"098874587\",\n        \"contrasena\": \"1245\",\n        \"estado\": true\n    },\n    {\n        \"id\": 4,\n        \"nombre\": \"Juan Pérez\",\n        \"genero\": \"Masculino\",\n        \"identificacion\": \"12345678901\",\n        \"direccion\": \"Calle Falsa 123\",\n        \"telefono\": \"3101234567\",\n        \"contrasena\": \"clave123\",\n        \"estado\": true\n    },\n    {\n        \"id\": 5,\n        \"nombre\": \"Ana Martínez\",\n        \"genero\": \"Femenino\",\n        \"identificacion\": \"10987654321\",\n        \"direccion\": \"Av. Siempre Viva 742\",\n        \"telefono\": \"3009876543\",\n        \"contrasena\": \"secure456\",\n        \"estado\": true\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Eliminar cliente id 4",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Ana Martínez\",\r\n  \"genero\": \"Femenino\",\r\n  \"identificacion\": \"10987654321\",\r\n  \"direccion\": \"Av. Siempre Viva 742\",\r\n  \"telefono\": \"3009876543\",\r\n  \"contrasena\": \"secure456\",\r\n  \"estado\": true\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/customers/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nombre\": \"Ana Martínez\",\r\n  \"genero\": \"Femenino\",\r\n  \"identificacion\": \"10987654321\",\r\n  \"direccion\": \"Av. Siempre Viva 742\",\r\n  \"telefono\": \"3009876543\",\r\n  \"contrasena\": \"secure456\",\r\n  \"estado\": true\r\n}\r\n"
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/customers/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"customers",
+										"4"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 31 May 2025 17:30:18 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Actualizar Cliente id 5",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"nombre\": \"Ana Martínez\",\r\n  \"genero\": \"Femenino\",\r\n  \"identificacion\": \"10987654321\",\r\n  \"direccion\": \"Nueva dirección actualizada 2025\",\r\n  \"telefono\": \"3217654321\",\r\n  \"contrasena\": \"secure456\",\r\n  \"estado\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/customers/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"5"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Cliente Actualizado",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n \"nombre\": \"Ana Martínez\",\r\n  \"genero\": \"Femenino\",\r\n  \"identificacion\": \"10987654321\",\r\n  \"direccion\": \"Nueva dirección actualizada 2025\",\r\n  \"telefono\": \"3217654321\",\r\n  \"contrasena\": \"secure456\",\r\n  \"estado\": true\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/customers/5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"customers",
+										"5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 May 2025 17:34:37 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 5,\n    \"nombre\": \"Ana Martínez\",\n    \"genero\": \"Femenino\",\n    \"identificacion\": \"10987654321\",\n    \"direccion\": \"Nueva dirección actualizada 2025\",\n    \"telefono\": \"3217654321\",\n    \"contrasena\": \"secure456\",\n    \"estado\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Ver Cambios",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Ana Martínez\",\r\n  \"genero\": \"Femenino\",\r\n  \"identificacion\": \"10987654321\",\r\n  \"direccion\": \"Av. Siempre Viva 742\",\r\n  \"telefono\": \"3009876543\",\r\n  \"contrasena\": \"secure456\",\r\n  \"estado\": true\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"customers"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Clientes con cambios guardados",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nombre\": \"Ana Martínez\",\r\n  \"genero\": \"Femenino\",\r\n  \"identificacion\": \"10987654321\",\r\n  \"direccion\": \"Av. Siempre Viva 742\",\r\n  \"telefono\": \"3009876543\",\r\n  \"contrasena\": \"secure456\",\r\n  \"estado\": true\r\n}\r\n"
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/customers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"customers"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 May 2025 17:35:32 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"nombre\": \"Jose Lema\",\n        \"genero\": \"Masculino\",\n        \"identificacion\": \"12345678901\",\n        \"direccion\": \"Otavalo sn y principal\",\n        \"telefono\": \"098254785\",\n        \"contrasena\": \"1234\",\n        \"estado\": true\n    },\n    {\n        \"id\": 2,\n        \"nombre\": \"Marianela Montalvo\",\n        \"genero\": \"Femenino\",\n        \"identificacion\": \"23456789012\",\n        \"direccion\": \"Amazonas y NNUU\",\n        \"telefono\": \"097548965\",\n        \"contrasena\": \"5678\",\n        \"estado\": true\n    },\n    {\n        \"id\": 3,\n        \"nombre\": \"Juan Osorio\",\n        \"genero\": \"Masculino\",\n        \"identificacion\": \"34567890123\",\n        \"direccion\": \"13 junio y Equinoccial\",\n        \"telefono\": \"098874587\",\n        \"contrasena\": \"1245\",\n        \"estado\": true\n    },\n    {\n        \"id\": 5,\n        \"nombre\": \"Ana Martínez\",\n        \"genero\": \"Femenino\",\n        \"identificacion\": \"10987654321\",\n        \"direccion\": \"Nueva dirección actualizada 2025\",\n        \"telefono\": \"3217654321\",\n        \"contrasena\": \"secure456\",\n        \"estado\": true\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Cuentas",
+			"item": [
+				{
+					"name": "Agregar Cuenta a Cliente 2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"numeroCuenta\": \"ACC1001\",\r\n  \"saldo\": 1500.00,\r\n  \"tipoCuenta\": \"Ahorro\",\r\n  \"estado\": true,\r\n  \"cliente\": {\r\n    \"id\": 2\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/accounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"accounts"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"numeroCuenta\": \"ACC1001\",\r\n  \"saldo\": 1500.00,\r\n  \"tipoCuenta\": \"Ahorro\",\r\n  \"estado\": true,\r\n  \"cliente\": {\r\n    \"id\": 2\r\n  }\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/accounts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"accounts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 May 2025 17:40:43 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 6,\n    \"numeroCuenta\": \"ACC1001\",\n    \"saldo\": 1500,\n    \"tipoCuenta\": \"Ahorro\",\n    \"estado\": true,\n    \"cliente\": {\n        \"id\": 2,\n        \"nombre\": null,\n        \"genero\": null,\n        \"identificacion\": null,\n        \"direccion\": null,\n        \"telefono\": null,\n        \"contrasena\": null,\n        \"estado\": true\n    },\n    \"movimientos\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Agregar Cuenta a cliente 5",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"numeroCuenta\": \"ACC1002\",\r\n  \"saldo\": 3000.00,\r\n  \"tipoCuenta\": \"Corriente\",\r\n  \"estado\": true,\r\n  \"cliente\": {\r\n    \"id\": 5\r\n  }\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/accounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"accounts"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"numeroCuenta\": \"ACC1002\",\r\n  \"saldo\": 3000.00,\r\n  \"tipoCuenta\": \"Corriente\",\r\n  \"estado\": true,\r\n  \"cliente\": {\r\n    \"id\": 5\r\n  }\r\n}\r\n\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/accounts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"accounts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 May 2025 17:41:38 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 7,\n    \"numeroCuenta\": \"ACC1002\",\n    \"saldo\": 3000,\n    \"tipoCuenta\": \"Corriente\",\n    \"estado\": true,\n    \"cliente\": {\n        \"id\": 5,\n        \"nombre\": null,\n        \"genero\": null,\n        \"identificacion\": null,\n        \"direccion\": null,\n        \"telefono\": null,\n        \"contrasena\": null,\n        \"estado\": true\n    },\n    \"movimientos\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Ver cuentas nuevas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Ana Martínez\",\r\n  \"genero\": \"Femenino\",\r\n  \"identificacion\": \"10987654321\",\r\n  \"direccion\": \"Av. Siempre Viva 742\",\r\n  \"telefono\": \"3009876543\",\r\n  \"contrasena\": \"secure456\",\r\n  \"estado\": true\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/accounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"accounts"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nombre\": \"Ana Martínez\",\r\n  \"genero\": \"Femenino\",\r\n  \"identificacion\": \"10987654321\",\r\n  \"direccion\": \"Av. Siempre Viva 742\",\r\n  \"telefono\": \"3009876543\",\r\n  \"contrasena\": \"secure456\",\r\n  \"estado\": true\r\n}\r\n"
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/accounts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"accounts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 May 2025 17:42:49 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"numeroCuenta\": \"478758\",\n        \"saldo\": 2000,\n        \"tipoCuenta\": \"Ahorro\",\n        \"estado\": true,\n        \"cliente\": {\n            \"id\": 1,\n            \"nombre\": \"Jose Lema\",\n            \"genero\": \"Masculino\",\n            \"identificacion\": \"12345678901\",\n            \"direccion\": \"Otavalo sn y principal\",\n            \"telefono\": \"098254785\",\n            \"contrasena\": \"1234\",\n            \"estado\": true\n        },\n        \"movimientos\": []\n    },\n    {\n        \"id\": 2,\n        \"numeroCuenta\": \"225487\",\n        \"saldo\": 100,\n        \"tipoCuenta\": \"Corriente\",\n        \"estado\": true,\n        \"cliente\": {\n            \"id\": 2,\n            \"nombre\": \"Marianela Montalvo\",\n            \"genero\": \"Femenino\",\n            \"identificacion\": \"23456789012\",\n            \"direccion\": \"Amazonas y NNUU\",\n            \"telefono\": \"097548965\",\n            \"contrasena\": \"5678\",\n            \"estado\": true\n        },\n        \"movimientos\": []\n    },\n    {\n        \"id\": 3,\n        \"numeroCuenta\": \"495878\",\n        \"saldo\": 0,\n        \"tipoCuenta\": \"Ahorros\",\n        \"estado\": true,\n        \"cliente\": {\n            \"id\": 3,\n            \"nombre\": \"Juan Osorio\",\n            \"genero\": \"Masculino\",\n            \"identificacion\": \"34567890123\",\n            \"direccion\": \"13 junio y Equinoccial\",\n            \"telefono\": \"098874587\",\n            \"contrasena\": \"1245\",\n            \"estado\": true\n        },\n        \"movimientos\": []\n    },\n    {\n        \"id\": 4,\n        \"numeroCuenta\": \"496825\",\n        \"saldo\": 540,\n        \"tipoCuenta\": \"Ahorros\",\n        \"estado\": true,\n        \"cliente\": {\n            \"id\": 2,\n            \"nombre\": \"Marianela Montalvo\",\n            \"genero\": \"Femenino\",\n            \"identificacion\": \"23456789012\",\n            \"direccion\": \"Amazonas y NNUU\",\n            \"telefono\": \"097548965\",\n            \"contrasena\": \"5678\",\n            \"estado\": true\n        },\n        \"movimientos\": []\n    },\n    {\n        \"id\": 5,\n        \"numeroCuenta\": \"585545\",\n        \"saldo\": 1000,\n        \"tipoCuenta\": \"Corriente\",\n        \"estado\": true,\n        \"cliente\": {\n            \"id\": 1,\n            \"nombre\": \"Jose Lema\",\n            \"genero\": \"Masculino\",\n            \"identificacion\": \"12345678901\",\n            \"direccion\": \"Otavalo sn y principal\",\n            \"telefono\": \"098254785\",\n            \"contrasena\": \"1234\",\n            \"estado\": true\n        },\n        \"movimientos\": []\n    },\n    {\n        \"id\": 6,\n        \"numeroCuenta\": \"ACC1001\",\n        \"saldo\": 1500,\n        \"tipoCuenta\": \"Ahorro\",\n        \"estado\": true,\n        \"cliente\": {\n            \"id\": 2,\n            \"nombre\": \"Marianela Montalvo\",\n            \"genero\": \"Femenino\",\n            \"identificacion\": \"23456789012\",\n            \"direccion\": \"Amazonas y NNUU\",\n            \"telefono\": \"097548965\",\n            \"contrasena\": \"5678\",\n            \"estado\": true\n        },\n        \"movimientos\": []\n    },\n    {\n        \"id\": 7,\n        \"numeroCuenta\": \"ACC1002\",\n        \"saldo\": 3000,\n        \"tipoCuenta\": \"Corriente\",\n        \"estado\": true,\n        \"cliente\": {\n            \"id\": 5,\n            \"nombre\": \"Ana Martínez\",\n            \"genero\": \"Femenino\",\n            \"identificacion\": \"10987654321\",\n            \"direccion\": \"Nueva dirección actualizada 2025\",\n            \"telefono\": \"3217654321\",\n            \"contrasena\": \"secure456\",\n            \"estado\": true\n        },\n        \"movimientos\": []\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Borra Cuenta con id 6",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Ana Martínez\",\r\n  \"genero\": \"Femenino\",\r\n  \"identificacion\": \"10987654321\",\r\n  \"direccion\": \"Av. Siempre Viva 742\",\r\n  \"telefono\": \"3009876543\",\r\n  \"contrasena\": \"secure456\",\r\n  \"estado\": true\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/accounts/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"accounts",
+								"6"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Borra Cuenta con id 6",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nombre\": \"Ana Martínez\",\r\n  \"genero\": \"Femenino\",\r\n  \"identificacion\": \"10987654321\",\r\n  \"direccion\": \"Av. Siempre Viva 742\",\r\n  \"telefono\": \"3009876543\",\r\n  \"contrasena\": \"secure456\",\r\n  \"estado\": true\r\n}\r\n"
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/accounts/6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"accounts",
+										"6"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 31 May 2025 17:46:18 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Actualizar cuenta con id 7",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"numeroCuenta\": \"123456789\",\r\n  \"saldo\": 3000.00,\r\n  \"tipoCuenta\": \"Ahorro\",\r\n  \"estado\": true,\r\n  \"cliente\": {\r\n    \"id\": 5\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/accounts/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"accounts",
+								"7"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"numeroCuenta\": \"123456789\",\r\n  \"saldo\": 3000.00,\r\n  \"tipoCuenta\": \"Ahorro\",\r\n  \"estado\": true,\r\n  \"cliente\": {\r\n    \"id\": 5\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/accounts/7",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"accounts",
+										"7"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 May 2025 17:50:42 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 7,\n    \"numeroCuenta\": \"123456789\",\n    \"saldo\": 3000,\n    \"tipoCuenta\": \"Ahorro\",\n    \"estado\": true,\n    \"cliente\": {\n        \"id\": 5,\n        \"nombre\": null,\n        \"genero\": null,\n        \"identificacion\": null,\n        \"direccion\": null,\n        \"telefono\": null,\n        \"contrasena\": null,\n        \"estado\": true\n    },\n    \"movimientos\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Ver cambios en cuenta",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Ana Martínez\",\r\n  \"genero\": \"Femenino\",\r\n  \"identificacion\": \"10987654321\",\r\n  \"direccion\": \"Av. Siempre Viva 742\",\r\n  \"telefono\": \"3009876543\",\r\n  \"contrasena\": \"secure456\",\r\n  \"estado\": true\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/accounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"accounts"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Ver cambios en cuenta",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nombre\": \"Ana Martínez\",\r\n  \"genero\": \"Femenino\",\r\n  \"identificacion\": \"10987654321\",\r\n  \"direccion\": \"Av. Siempre Viva 742\",\r\n  \"telefono\": \"3009876543\",\r\n  \"contrasena\": \"secure456\",\r\n  \"estado\": true\r\n}\r\n"
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/accounts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"accounts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 May 2025 17:51:47 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"numeroCuenta\": \"478758\",\n        \"saldo\": 2000,\n        \"tipoCuenta\": \"Ahorro\",\n        \"estado\": true,\n        \"cliente\": {\n            \"id\": 1,\n            \"nombre\": \"Jose Lema\",\n            \"genero\": \"Masculino\",\n            \"identificacion\": \"12345678901\",\n            \"direccion\": \"Otavalo sn y principal\",\n            \"telefono\": \"098254785\",\n            \"contrasena\": \"1234\",\n            \"estado\": true\n        },\n        \"movimientos\": []\n    },\n    {\n        \"id\": 2,\n        \"numeroCuenta\": \"225487\",\n        \"saldo\": 100,\n        \"tipoCuenta\": \"Corriente\",\n        \"estado\": true,\n        \"cliente\": {\n            \"id\": 2,\n            \"nombre\": \"Marianela Montalvo\",\n            \"genero\": \"Femenino\",\n            \"identificacion\": \"23456789012\",\n            \"direccion\": \"Amazonas y NNUU\",\n            \"telefono\": \"097548965\",\n            \"contrasena\": \"5678\",\n            \"estado\": true\n        },\n        \"movimientos\": []\n    },\n    {\n        \"id\": 3,\n        \"numeroCuenta\": \"495878\",\n        \"saldo\": 0,\n        \"tipoCuenta\": \"Ahorros\",\n        \"estado\": true,\n        \"cliente\": {\n            \"id\": 3,\n            \"nombre\": \"Juan Osorio\",\n            \"genero\": \"Masculino\",\n            \"identificacion\": \"34567890123\",\n            \"direccion\": \"13 junio y Equinoccial\",\n            \"telefono\": \"098874587\",\n            \"contrasena\": \"1245\",\n            \"estado\": true\n        },\n        \"movimientos\": []\n    },\n    {\n        \"id\": 4,\n        \"numeroCuenta\": \"496825\",\n        \"saldo\": 540,\n        \"tipoCuenta\": \"Ahorros\",\n        \"estado\": true,\n        \"cliente\": {\n            \"id\": 2,\n            \"nombre\": \"Marianela Montalvo\",\n            \"genero\": \"Femenino\",\n            \"identificacion\": \"23456789012\",\n            \"direccion\": \"Amazonas y NNUU\",\n            \"telefono\": \"097548965\",\n            \"contrasena\": \"5678\",\n            \"estado\": true\n        },\n        \"movimientos\": []\n    },\n    {\n        \"id\": 5,\n        \"numeroCuenta\": \"585545\",\n        \"saldo\": 1000,\n        \"tipoCuenta\": \"Corriente\",\n        \"estado\": true,\n        \"cliente\": {\n            \"id\": 1,\n            \"nombre\": \"Jose Lema\",\n            \"genero\": \"Masculino\",\n            \"identificacion\": \"12345678901\",\n            \"direccion\": \"Otavalo sn y principal\",\n            \"telefono\": \"098254785\",\n            \"contrasena\": \"1234\",\n            \"estado\": true\n        },\n        \"movimientos\": []\n    },\n    {\n        \"id\": 7,\n        \"numeroCuenta\": \"123456789\",\n        \"saldo\": 3000,\n        \"tipoCuenta\": \"Ahorro\",\n        \"estado\": true,\n        \"cliente\": {\n            \"id\": 5,\n            \"nombre\": \"Ana Martínez\",\n            \"genero\": \"Femenino\",\n            \"identificacion\": \"10987654321\",\n            \"direccion\": \"Nueva dirección actualizada 2025\",\n            \"telefono\": \"3217654321\",\n            \"contrasena\": \"secure456\",\n            \"estado\": true\n        },\n        \"movimientos\": []\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Movimientos",
+			"item": [
+				{
+					"name": "Validacion de errores",
+					"item": [
+						{
+							"name": "Movimiento de tipo incorrecto",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"tipoMovimiento\": \"Descuento\",\r\n  \"valor\": 500.0,\r\n  \"cuenta\": {\r\n    \"id\": 1\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/movements",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"movements"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"tipoMovimiento\": \"Descuento\",\r\n  \"valor\": 500.0,\r\n  \"cuenta\": {\r\n    \"id\": 1\r\n  }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/v1/movements",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"movements"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain;charset=UTF-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "40"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 31 May 2025 18:20:05 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "Tipo de movimiento no válido: Descuento"
+								}
+							]
+						},
+						{
+							"name": "Movimiento Valor 0",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"tipoMovimiento\": \"Credito\",\r\n  \"valor\": 0,\r\n  \"cuenta\": {\r\n    \"id\": 1\r\n  }\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/movements",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"movements"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"tipoMovimiento\": \"Credito\",\r\n  \"valor\": 0,\r\n  \"cuenta\": {\r\n    \"id\": 1\r\n  }\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/v1/movements",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"movements"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain;charset=UTF-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "45"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 31 May 2025 18:20:53 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "El valor del movimiento no puede ser negativo"
+								}
+							]
+						},
+						{
+							"name": "Saldo Cuenta 1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nombre\": \"Ana Martínez\",\r\n  \"genero\": \"Femenino\",\r\n  \"identificacion\": \"10987654321\",\r\n  \"direccion\": \"Av. Siempre Viva 742\",\r\n  \"telefono\": \"3009876543\",\r\n  \"contrasena\": \"secure456\",\r\n  \"estado\": true\r\n}\r\n"
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/accounts/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"accounts",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Saldo 2000",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"nombre\": \"Ana Martínez\",\r\n  \"genero\": \"Femenino\",\r\n  \"identificacion\": \"10987654321\",\r\n  \"direccion\": \"Av. Siempre Viva 742\",\r\n  \"telefono\": \"3009876543\",\r\n  \"contrasena\": \"secure456\",\r\n  \"estado\": true\r\n}\r\n"
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/v1/accounts/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"accounts",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 31 May 2025 18:21:57 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"numeroCuenta\": \"478758\",\n    \"saldo\": 2000,\n    \"tipoCuenta\": \"Ahorro\",\n    \"estado\": true,\n    \"cliente\": {\n        \"id\": 1,\n        \"nombre\": \"Jose Lema\",\n        \"genero\": \"Masculino\",\n        \"identificacion\": \"12345678901\",\n        \"direccion\": \"Otavalo sn y principal\",\n        \"telefono\": \"098254785\",\n        \"contrasena\": \"1234\",\n        \"estado\": true\n    },\n    \"movimientos\": []\n}"
+								}
+							]
+						},
+						{
+							"name": "Saldo insuficiente",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"tipoMovimiento\": \"DEBITO\",\r\n  \"valor\": 1000000.0,\r\n  \"cuenta\": {\r\n    \"id\": 1\r\n  }\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/movements",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"movements"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"tipoMovimiento\": \"DEBITO\",\r\n  \"valor\": 1000000.0,\r\n  \"cuenta\": {\r\n    \"id\": 1\r\n  }\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/v1/movements",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"movements"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain;charset=UTF-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "19"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 31 May 2025 18:22:52 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "Saldo no disponible"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Movimientos de Debito y Credito Correctos",
+					"item": [
+						{
+							"name": "Saldo Cuenta 1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nombre\": \"Ana Martínez\",\r\n  \"genero\": \"Femenino\",\r\n  \"identificacion\": \"10987654321\",\r\n  \"direccion\": \"Av. Siempre Viva 742\",\r\n  \"telefono\": \"3009876543\",\r\n  \"contrasena\": \"secure456\",\r\n  \"estado\": true\r\n}\r\n"
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/accounts/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"accounts",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Saldo 2500",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"nombre\": \"Ana Martínez\",\r\n  \"genero\": \"Femenino\",\r\n  \"identificacion\": \"10987654321\",\r\n  \"direccion\": \"Av. Siempre Viva 742\",\r\n  \"telefono\": \"3009876543\",\r\n  \"contrasena\": \"secure456\",\r\n  \"estado\": true\r\n}\r\n"
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/v1/accounts/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"accounts",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 31 May 2025 18:39:25 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"numeroCuenta\": \"478758\",\n    \"saldo\": 2500,\n    \"tipoCuenta\": \"Ahorro\",\n    \"estado\": true,\n    \"cliente\": {\n        \"id\": 1,\n        \"nombre\": \"Jose Lema\",\n        \"genero\": \"Masculino\",\n        \"identificacion\": \"12345678901\",\n        \"direccion\": \"Otavalo sn y principal\",\n        \"telefono\": \"098254785\",\n        \"contrasena\": \"1234\",\n        \"estado\": true\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Credito 500 a Cuenta 1",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"tipoMovimiento\": \"CREDITO\",\r\n  \"valor\": 500.0,\r\n  \"cuenta\": {\r\n    \"id\": 1\r\n  }\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/movements",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"movements"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"tipoMovimiento\": \"CREDITO\",\r\n  \"valor\": 500.0,\r\n  \"cuenta\": {\r\n    \"id\": 1\r\n  }\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/v1/movements",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"movements"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 31 May 2025 18:40:40 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 2,\n    \"tipoMovimiento\": \"CREDITO\",\n    \"valor\": 500,\n    \"saldo\": 3000,\n    \"fecha\": \"2025-05-31T13:40:40.4147812\",\n    \"cuenta\": {\n        \"id\": 1,\n        \"numeroCuenta\": \"478758\",\n        \"saldo\": 3000,\n        \"tipoCuenta\": \"Ahorro\",\n        \"estado\": true,\n        \"cliente\": {\n            \"id\": 1,\n            \"nombre\": \"Jose Lema\",\n            \"genero\": \"Masculino\",\n            \"identificacion\": \"12345678901\",\n            \"direccion\": \"Otavalo sn y principal\",\n            \"telefono\": \"098254785\",\n            \"contrasena\": \"1234\",\n            \"estado\": true\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Saldo Nuevo Cuenta 1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nombre\": \"Ana Martínez\",\r\n  \"genero\": \"Femenino\",\r\n  \"identificacion\": \"10987654321\",\r\n  \"direccion\": \"Av. Siempre Viva 742\",\r\n  \"telefono\": \"3009876543\",\r\n  \"contrasena\": \"secure456\",\r\n  \"estado\": true\r\n}\r\n"
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/accounts/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"accounts",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Saldo 3000",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"nombre\": \"Ana Martínez\",\r\n  \"genero\": \"Femenino\",\r\n  \"identificacion\": \"10987654321\",\r\n  \"direccion\": \"Av. Siempre Viva 742\",\r\n  \"telefono\": \"3009876543\",\r\n  \"contrasena\": \"secure456\",\r\n  \"estado\": true\r\n}\r\n"
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/v1/accounts/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"accounts",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 31 May 2025 18:41:31 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"numeroCuenta\": \"478758\",\n    \"saldo\": 3000,\n    \"tipoCuenta\": \"Ahorro\",\n    \"estado\": true,\n    \"cliente\": {\n        \"id\": 1,\n        \"nombre\": \"Jose Lema\",\n        \"genero\": \"Masculino\",\n        \"identificacion\": \"12345678901\",\n        \"direccion\": \"Otavalo sn y principal\",\n        \"telefono\": \"098254785\",\n        \"contrasena\": \"1234\",\n        \"estado\": true\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Debito 750 a Cuenta 1",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"tipoMovimiento\": \"DEBITO\",\r\n  \"valor\": 750.0,\r\n  \"cuenta\": {\r\n    \"id\": 1\r\n  }\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/movements",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"movements"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"tipoMovimiento\": \"DEBITO\",\r\n  \"valor\": 750.0,\r\n  \"cuenta\": {\r\n    \"id\": 1\r\n  }\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/v1/movements",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"movements"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 31 May 2025 18:42:50 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 3,\n    \"tipoMovimiento\": \"DEBITO\",\n    \"valor\": 750,\n    \"saldo\": 2250,\n    \"fecha\": \"2025-05-31T13:42:50.6265279\",\n    \"cuenta\": {\n        \"id\": 1,\n        \"numeroCuenta\": \"478758\",\n        \"saldo\": 2250,\n        \"tipoCuenta\": \"Ahorro\",\n        \"estado\": true,\n        \"cliente\": {\n            \"id\": 1,\n            \"nombre\": \"Jose Lema\",\n            \"genero\": \"Masculino\",\n            \"identificacion\": \"12345678901\",\n            \"direccion\": \"Otavalo sn y principal\",\n            \"telefono\": \"098254785\",\n            \"contrasena\": \"1234\",\n            \"estado\": true\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Saldo Nuevo_2 Cuenta 1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nombre\": \"Ana Martínez\",\r\n  \"genero\": \"Femenino\",\r\n  \"identificacion\": \"10987654321\",\r\n  \"direccion\": \"Av. Siempre Viva 742\",\r\n  \"telefono\": \"3009876543\",\r\n  \"contrasena\": \"secure456\",\r\n  \"estado\": true\r\n}\r\n"
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/accounts/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"accounts",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Saldo 2250",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"nombre\": \"Ana Martínez\",\r\n  \"genero\": \"Femenino\",\r\n  \"identificacion\": \"10987654321\",\r\n  \"direccion\": \"Av. Siempre Viva 742\",\r\n  \"telefono\": \"3009876543\",\r\n  \"contrasena\": \"secure456\",\r\n  \"estado\": true\r\n}\r\n"
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/v1/accounts/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"accounts",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 31 May 2025 18:43:39 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"numeroCuenta\": \"478758\",\n    \"saldo\": 2250,\n    \"tipoCuenta\": \"Ahorro\",\n    \"estado\": true,\n    \"cliente\": {\n        \"id\": 1,\n        \"nombre\": \"Jose Lema\",\n        \"genero\": \"Masculino\",\n        \"identificacion\": \"12345678901\",\n        \"direccion\": \"Otavalo sn y principal\",\n        \"telefono\": \"098254785\",\n        \"contrasena\": \"1234\",\n        \"estado\": true\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Movimiento de Credito a la cuenta 2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/movements",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"movements"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"tipoMovimiento\": \"CREDITO\",\r\n  \"valor\": 1500.0,\r\n  \"cuenta\": {\r\n    \"id\": 2\r\n  }\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/movements",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"movements"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 May 2025 18:52:13 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 4,\n    \"tipoMovimiento\": \"CREDITO\",\n    \"valor\": 1500,\n    \"saldo\": 1600,\n    \"fecha\": \"2025-05-31T13:52:13.9582949\",\n    \"cuenta\": {\n        \"id\": 2,\n        \"numeroCuenta\": \"225487\",\n        \"saldo\": 1600,\n        \"tipoCuenta\": \"Corriente\",\n        \"estado\": true,\n        \"cliente\": {\n            \"id\": 2,\n            \"nombre\": \"Marianela Montalvo\",\n            \"genero\": \"Femenino\",\n            \"identificacion\": \"23456789012\",\n            \"direccion\": \"Amazonas y NNUU\",\n            \"telefono\": \"097548965\",\n            \"contrasena\": \"5678\",\n            \"estado\": true\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Ver todos los movimientos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"tipoMovimiento\": \"DEBITO\",\r\n  \"valor\": 750.0,\r\n  \"cuenta\": {\r\n    \"id\": 1\r\n  }\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/movements",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"movements"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Movimientos",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"tipoMovimiento\": \"DEBITO\",\r\n  \"valor\": 750.0,\r\n  \"cuenta\": {\r\n    \"id\": 1\r\n  }\r\n}\r\n"
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/movements",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"movements"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 May 2025 18:52:50 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"tipoMovimiento\": \"CREDITO\",\n        \"valor\": 500,\n        \"saldo\": 2500,\n        \"fecha\": \"2025-05-31T13:36:18\",\n        \"cuenta\": {\n            \"id\": 1,\n            \"numeroCuenta\": \"478758\",\n            \"saldo\": 2250,\n            \"tipoCuenta\": \"Ahorro\",\n            \"estado\": true,\n            \"cliente\": {\n                \"id\": 1,\n                \"nombre\": \"Jose Lema\",\n                \"genero\": \"Masculino\",\n                \"identificacion\": \"12345678901\",\n                \"direccion\": \"Otavalo sn y principal\",\n                \"telefono\": \"098254785\",\n                \"contrasena\": \"1234\",\n                \"estado\": true\n            }\n        }\n    },\n    {\n        \"id\": 2,\n        \"tipoMovimiento\": \"CREDITO\",\n        \"valor\": 500,\n        \"saldo\": 3000,\n        \"fecha\": \"2025-05-31T13:40:40\",\n        \"cuenta\": {\n            \"id\": 1,\n            \"numeroCuenta\": \"478758\",\n            \"saldo\": 2250,\n            \"tipoCuenta\": \"Ahorro\",\n            \"estado\": true,\n            \"cliente\": {\n                \"id\": 1,\n                \"nombre\": \"Jose Lema\",\n                \"genero\": \"Masculino\",\n                \"identificacion\": \"12345678901\",\n                \"direccion\": \"Otavalo sn y principal\",\n                \"telefono\": \"098254785\",\n                \"contrasena\": \"1234\",\n                \"estado\": true\n            }\n        }\n    },\n    {\n        \"id\": 3,\n        \"tipoMovimiento\": \"DEBITO\",\n        \"valor\": 750,\n        \"saldo\": 2250,\n        \"fecha\": \"2025-05-31T13:42:51\",\n        \"cuenta\": {\n            \"id\": 1,\n            \"numeroCuenta\": \"478758\",\n            \"saldo\": 2250,\n            \"tipoCuenta\": \"Ahorro\",\n            \"estado\": true,\n            \"cliente\": {\n                \"id\": 1,\n                \"nombre\": \"Jose Lema\",\n                \"genero\": \"Masculino\",\n                \"identificacion\": \"12345678901\",\n                \"direccion\": \"Otavalo sn y principal\",\n                \"telefono\": \"098254785\",\n                \"contrasena\": \"1234\",\n                \"estado\": true\n            }\n        }\n    },\n    {\n        \"id\": 4,\n        \"tipoMovimiento\": \"CREDITO\",\n        \"valor\": 1500,\n        \"saldo\": 1600,\n        \"fecha\": \"2025-05-31T13:52:14\",\n        \"cuenta\": {\n            \"id\": 2,\n            \"numeroCuenta\": \"225487\",\n            \"saldo\": 1600,\n            \"tipoCuenta\": \"Corriente\",\n            \"estado\": true,\n            \"cliente\": {\n                \"id\": 2,\n                \"nombre\": \"Marianela Montalvo\",\n                \"genero\": \"Femenino\",\n                \"identificacion\": \"23456789012\",\n                \"direccion\": \"Amazonas y NNUU\",\n                \"telefono\": \"097548965\",\n                \"contrasena\": \"5678\",\n                \"estado\": true\n            }\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Ver movimiento por id de cuenta",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"tipoMovimiento\": \"DEBITO\",\r\n  \"valor\": 750.0,\r\n  \"cuenta\": {\r\n    \"id\": 1\r\n  }\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/movements/account/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"movements",
+								"account",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Movimiento id Cuenta 1",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"tipoMovimiento\": \"DEBITO\",\r\n  \"valor\": 750.0,\r\n  \"cuenta\": {\r\n    \"id\": 1\r\n  }\r\n}\r\n"
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/movements/account/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"movements",
+										"account",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 May 2025 18:53:13 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"tipoMovimiento\": \"CREDITO\",\n        \"valor\": 500,\n        \"saldo\": 2500,\n        \"fecha\": \"2025-05-31T13:36:18\",\n        \"cuenta\": {\n            \"id\": 1,\n            \"numeroCuenta\": \"478758\",\n            \"saldo\": 2250,\n            \"tipoCuenta\": \"Ahorro\",\n            \"estado\": true,\n            \"cliente\": {\n                \"id\": 1,\n                \"nombre\": \"Jose Lema\",\n                \"genero\": \"Masculino\",\n                \"identificacion\": \"12345678901\",\n                \"direccion\": \"Otavalo sn y principal\",\n                \"telefono\": \"098254785\",\n                \"contrasena\": \"1234\",\n                \"estado\": true\n            }\n        }\n    },\n    {\n        \"id\": 2,\n        \"tipoMovimiento\": \"CREDITO\",\n        \"valor\": 500,\n        \"saldo\": 3000,\n        \"fecha\": \"2025-05-31T13:40:40\",\n        \"cuenta\": {\n            \"id\": 1,\n            \"numeroCuenta\": \"478758\",\n            \"saldo\": 2250,\n            \"tipoCuenta\": \"Ahorro\",\n            \"estado\": true,\n            \"cliente\": {\n                \"id\": 1,\n                \"nombre\": \"Jose Lema\",\n                \"genero\": \"Masculino\",\n                \"identificacion\": \"12345678901\",\n                \"direccion\": \"Otavalo sn y principal\",\n                \"telefono\": \"098254785\",\n                \"contrasena\": \"1234\",\n                \"estado\": true\n            }\n        }\n    },\n    {\n        \"id\": 3,\n        \"tipoMovimiento\": \"DEBITO\",\n        \"valor\": 750,\n        \"saldo\": 2250,\n        \"fecha\": \"2025-05-31T13:42:51\",\n        \"cuenta\": {\n            \"id\": 1,\n            \"numeroCuenta\": \"478758\",\n            \"saldo\": 2250,\n            \"tipoCuenta\": \"Ahorro\",\n            \"estado\": true,\n            \"cliente\": {\n                \"id\": 1,\n                \"nombre\": \"Jose Lema\",\n                \"genero\": \"Masculino\",\n                \"identificacion\": \"12345678901\",\n                \"direccion\": \"Otavalo sn y principal\",\n                \"telefono\": \"098254785\",\n                \"contrasena\": \"1234\",\n                \"estado\": true\n            }\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Ver Movimiento por id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"tipoMovimiento\": \"DEBITO\",\r\n  \"valor\": 750.0,\r\n  \"cuenta\": {\r\n    \"id\": 1\r\n  }\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/movements/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"movements",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Movimiento id 3",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"tipoMovimiento\": \"DEBITO\",\r\n  \"valor\": 750.0,\r\n  \"cuenta\": {\r\n    \"id\": 1\r\n  }\r\n}\r\n"
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/movements/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"movements",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 May 2025 18:49:35 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"tipoMovimiento\": \"DEBITO\",\n    \"valor\": 750,\n    \"saldo\": 2250,\n    \"fecha\": \"2025-05-31T13:42:51\",\n    \"cuenta\": {\n        \"id\": 1,\n        \"numeroCuenta\": \"478758\",\n        \"saldo\": 2250,\n        \"tipoCuenta\": \"Ahorro\",\n        \"estado\": true,\n        \"cliente\": {\n            \"id\": 1,\n            \"nombre\": \"Jose Lema\",\n            \"genero\": \"Masculino\",\n            \"identificacion\": \"12345678901\",\n            \"direccion\": \"Otavalo sn y principal\",\n            \"telefono\": \"098254785\",\n            \"contrasena\": \"1234\",\n            \"estado\": true\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Movimiento por numero de cuenta",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"tipoMovimiento\": \"DEBITO\",\r\n  \"valor\": 750.0,\r\n  \"cuenta\": {\r\n    \"id\": 1\r\n  }\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/movements/number/225487",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"movements",
+								"number",
+								"225487"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Movimiento cuenta 225487",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"tipoMovimiento\": \"DEBITO\",\r\n  \"valor\": 750.0,\r\n  \"cuenta\": {\r\n    \"id\": 1\r\n  }\r\n}\r\n"
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/movements/number/225487",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"movements",
+										"number",
+										"225487"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 May 2025 18:54:24 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 4,\n        \"tipoMovimiento\": \"CREDITO\",\n        \"valor\": 1500,\n        \"saldo\": 1600,\n        \"fecha\": \"2025-05-31T13:52:14\",\n        \"cuenta\": {\n            \"id\": 2,\n            \"numeroCuenta\": \"225487\",\n            \"saldo\": 1600,\n            \"tipoCuenta\": \"Corriente\",\n            \"estado\": true,\n            \"cliente\": {\n                \"id\": 2,\n                \"nombre\": \"Marianela Montalvo\",\n                \"genero\": \"Femenino\",\n                \"identificacion\": \"23456789012\",\n                \"direccion\": \"Amazonas y NNUU\",\n                \"telefono\": \"097548965\",\n                \"contrasena\": \"5678\",\n                \"estado\": true\n            }\n        }\n    }\n]"
+						}
+					]
+				}
+			]
+		}
+	]
+}
