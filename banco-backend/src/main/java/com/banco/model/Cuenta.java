@@ -7,6 +7,7 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
@@ -36,7 +37,7 @@ public class Cuenta {
     @JoinColumn(name = "cliente_id", nullable = false)
     private Cliente cliente;
 
-    @JsonIgnore
+    @JsonManagedReference
     @OneToMany(mappedBy = "cuenta", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Movimiento> movimientos;
 }
